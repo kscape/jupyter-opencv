@@ -10,4 +10,4 @@ docker build -t kscape/jupyter-opencv .
 
 This command runs it so you can connect at localhost using ssl with no token required.
 
-docker run --name jupyter -d -p 443:8888 -v $(pwd)\notebooks:/home/jovyan/work kscape/jupyter-opencv start-notebook.sh --NotebookApp.token=''
+docker run --name jupyter-opencv -d -p 8888:8888  -v "$(pwd)/notebooks:/home/jovyan/work" kscape/jupyter-opencv start-notebook.sh --NotebookApp.token=''
